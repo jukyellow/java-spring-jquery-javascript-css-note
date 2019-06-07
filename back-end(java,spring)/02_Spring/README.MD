@@ -11,6 +11,7 @@
 </pre>
 - Advice의 수행순서 Around -> Before -> After -> Around  
 ![image](https://user-images.githubusercontent.com/45334819/59117125-09885d00-8988-11e9-9809-e513498a920c.png)  
+-관련소스: https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/aop  
 
 ### 2. Logging (Log4j, Slf4j : simple logging facade for java)
 - 정리 : https://www.evernote.com/shard/s222/sh/12c9a642-bd83-48f7-92fb-f995e3831285/3c74a4a011bf4c596783baee7835b7c2  
@@ -19,3 +20,4 @@
     실행: Run as Configuratuin > com.test.logging.LoggingTest  
 </pre>
 ![image](https://user-images.githubusercontent.com/45334819/59117939-ef4f7e80-8989-11e9-975a-888c7dfd05de.png)
+- 관련소스: https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/logging  
