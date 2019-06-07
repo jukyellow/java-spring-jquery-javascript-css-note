@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration debug="false" xmlns:log4j="http://jakarta.apache.org/log4j/">
+	<appender name="CONSOLE_APPENDER" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%5p (%F[%M]:%L) [%d{yyyy/MM/dd HH:mm:ss.SSS}] - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="DAILY_APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="datePattern" value="yyyy-MM-dd" />
+		<param name="file" value="${test.home}/log/daily_${daily.filename}.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n %d{yyyy/MM/dd HH:mm:ss} %-5p %M(%F:%L) - %m  %n" />
+		</layout>
+	</appender>
+	
+	<appender name="DAILY_ERROR_APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="datePattern" value="yyyy-MM-dd" />
+		<param name="file" value="${test.home}/log/daily_error_${daily.filename}.log" />
+		<param name="Append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n %d{yyyy/MM/dd HH:mm:ss} %-5p %M(%F:%L) - %m  %n" />
+		</layout>
+	</appender>	
+	
+	<appender name="SQL_APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
+		<param name="datePattern" value="yyyy-MM-dd" />
+		<param name="file" value="${ktnet.Home}/log/SPRING_SCHEDULE/DB_BACKUP/sql_${ktnet.svrNmAbbr}.log" />
+		<param name="append" value="true" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%n %d{yyyy/MM/dd HH:mm:ss} %-5p %M(%F:%L) - %m  %n" />
+		</layout>
+	</appender>
+	
+	<logger name="java.sql" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE_APPENDER" />		
+		<appender-ref ref="SQL_APPENDER" />
+	</logger>
+
+	<logger name="com.ibatis" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE_APPENDER" />		
+		<appender-ref ref="SQL_APPENDER" />
+	</logger>
+	
+	<logger name="org.springframework.jdbc" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE_APPENDER" />		
+		<appender-ref ref="SQL_APPENDER" />
+	</logger>	
+
+	<logger name="com.test" additivity="false">
+		<level value="debug" />
+		<appender-ref ref="CONSOLE_APPENDER" />
+		<appender-ref ref="DAILY_APPENDER" />
+	</logger>
+	
+	<logger name="com.test.error">
+		<level value="warn" />
+		<appender-ref ref="DAILY_ERROR_APPENDER" />
+	</logger>
+	
+	<root>
+		<level value="warn" />
+		<appender-ref ref="CONSOLE_APPENDER" />		
+	</root>
+</log4j:configuration>
