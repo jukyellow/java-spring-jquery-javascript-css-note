@@ -35,3 +35,18 @@ for(Method method : methods) {
 }
 </pre>
 - https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/reflection  
+
+### 4. Annotation  
+- 소스코드 클래스/메소드/변수등에 메타 데이타정보를 제공  
+<pre>
+@Target(value={java.lang.annotation.ElementType.METHOD})
+@Retention(RetentionPolicy.RUNTIME)
+@Inherited
+@Documented
+public @interface TestAnnoDef {
+	public String value() default "test annotation val";
+	public String name() default "test annotation name";
+	Class<? extends TestJob>[] jobs() default {};
+}
+</pre>
+- https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/annotation  
