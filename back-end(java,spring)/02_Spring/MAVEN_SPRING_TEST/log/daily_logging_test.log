@@ -1,0 +1,16 @@
+
+ 2019/05/31 17:52:14 INFO  <init>(LoggingTest.java:53) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:${app.name}) --  
+
+ 2019/05/31 17:55:01 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:${app.name}) --  
+
+ 2019/05/31 18:00:31 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/05/31 18:01:19 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/05/31 18:02:44 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/05/31 18:02:44 ERROR <init>(LoggingTest.java:61) - Exception occurs:err Test...  
+
+ 2019/05/31 18:02:55 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/05/31 18:02:55 ERROR <init>(LoggingTest.java:60) - Exception occurs:err Test...  

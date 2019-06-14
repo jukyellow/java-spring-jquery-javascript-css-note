@@ -10,7 +10,7 @@
 	<context:annotation-config /> <!-- activate annotation-bean -->
 	<aop:aspectj-autoproxy />	  <!-- enable aop-use -->
 	
-	<context:component-scan base-package="com.test.aop" />
+	<context:component-scan base-package="com.test.aop, com.test.annotation" />
 	
 	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
 		<property name="locations"> 

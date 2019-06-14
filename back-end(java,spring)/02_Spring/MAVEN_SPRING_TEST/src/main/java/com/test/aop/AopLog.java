@@ -6,10 +6,12 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 @Component
 @Aspect //pointcut(where) + advice(what)
+@Order(0) //Lower values have higher priority
 public class AopLog {//extends CommonPointcut {
 	@Pointcut("execution(* com.test.aop.AopTestService.*(..))") 
 	public void logPointcut() {	}
