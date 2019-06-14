@@ -21,3 +21,17 @@
 </pre>
 ![image](https://user-images.githubusercontent.com/45334819/59117939-ef4f7e80-8989-11e9-975a-888c7dfd05de.png)
 - 관련소스: https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/logging  
+
+### 3. Reflection  
+- JVM에서 적재되어 구동중인 클래스를 동적으로 호출하여 사용(ex: Spring Bean객체 로딩하는 방식)  
+<pre>
+Class targetClass = Class.forName("com.test.reflection.ReflectionSample");
+ReflectionSample rSample = (ReflectionSample) targetClass.newInstance();
+Method methods[] = targetClass.getDeclaredMethods();
+for(Method method : methods) {
+    if(method.getName().equals("printInfo")) {
+        method.invoke(rSample, null);
+    }
+}
+</pre>
+- https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/reflection  
