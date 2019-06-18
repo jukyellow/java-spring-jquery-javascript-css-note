@@ -10,3 +10,4 @@
 - Logging  
 - Reflection  
 - Annotation  
+- enum  
