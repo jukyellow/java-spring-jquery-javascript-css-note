@@ -50,3 +50,29 @@ public @interface TestAnnoDef {
 }
 </pre>
 - https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/annotation  
+
+### 5. enum
+- 클래스처럼 보이게 하는 상수  
+- 새로운 열거형을 선언하면, 내부적으로 Enum 클래스형 기반의 새로 클래스형이 만들어짐  
+<pre>
+public class EnumTestMain {
+	private static enum  PERSON_TYPE {
+		MAN("남자"), WOMAN("여자"), CHILDREN("아이");
+		
+		private String desc;
+		private PERSON_TYPE(String desc) {
+			System.out.println("PERSON_TYPE called: " + desc);
+			this.desc = desc;
+		}
+		public String getTypeDesc() {
+			return this.desc;
+		}
+	}
+	
+	public static void main( String[] args ) {
+		for(PERSON_TYPE type : PERSON_TYPE.values()) {
+			System.out.println("type: " + type + ",desc:" + type.getTypeDesc());
+		}
+	}
+}	
+</pre>
