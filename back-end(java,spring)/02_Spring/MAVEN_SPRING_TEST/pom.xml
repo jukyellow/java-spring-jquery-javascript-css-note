@@ -41,28 +41,7 @@
 		<id>mesir-repo</id>
 		<url>http://mesir.googlecode.com/svn/trunk/mavenrepo</url>
 	</repository>
-	<!-- 
-	<repository>
-		<id>central</id>
-		<url>https://nexus.ktnet.com/content/repositories/central/</url>
-		<releases>
-			<enabled>true</enabled>
-		</releases>
-		<snapshots>
-			<enabled>false</enabled>
-		</snapshots>
-	</repository>
-    <repository>
-        <id>nlps-repo</id>
-        <url>https://nexus.ktnet.com/content/repositories/itps.release/</url>
-        <releases>
-            <enabled>true</enabled>
-        </releases>
-        <snapshots>
-            <enabled>true</enabled>
-        </snapshots>
-    </repository>
-     -->
+	
   </repositories>
   
   <dependencies>
