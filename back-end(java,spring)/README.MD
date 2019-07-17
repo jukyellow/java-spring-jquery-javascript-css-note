@@ -6,10 +6,13 @@
 ![image](https://user-images.githubusercontent.com/45334819/58895126-34777480-872e-11e9-992b-334688d44d07.png)  
 
 #### 2. Spring (https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring)  
-- AOP  
-- Logging (Log4j, Filter, Dynamic Log4j)
-- Reflection  
-- Annotation  
-- enum  
-- xml
+2-1) AOP  
+2-2) Logging
+2-3) Reflection  
+2-4) Annotation  
+2-5) enum  
+2-6) Log4j Filter  
+2-7) Dynamic Log4j  
+2-8) xml  
+
 
