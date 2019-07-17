@@ -76,3 +76,99 @@ public class EnumTestMain {
 	}
 }	
 </pre>
+
+### 6. Log4j Filter
+``` java
+public class ConsoleFilter extends Filter {
+	@Override
+	public int decide(LoggingEvent event) {
+		if(event.getLogger().getName().equals("com.test.logging.LoggingTest")) {
+			return DENY;
+		}else {		
+			return NEUTRAL;
+		}
+	}
+}
+```
+``` xml
+	<appender name="CONSOLE_APPENDER" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%5p (%F[%M]:%L) [%d{yyyy/MM/dd HH:mm:ss.SSS}] - %m%n" />
+		</layout>
+		<filter class="com.test.logging.ConsoleFilter" />
+	</appender>
+```
+- Filter를 적용해 runtime시 동적으로 다양한 제어 가능
+
+### 7. Daynamic Log4j
+- 참고: https://www.programcreek.com/java-api-examples/?api=org.apache.log4j.RollingFileAppender
+``` java
+if(!APPENDER_MAP.containsKey(logDir)) {	// Appender 
+			String clsName = rClass.getSimpleName();
+			
+			RollingFileAppender drfa = new RollingFileAppender();
+			drfa.setName(clsName);
+			drfa.setLayout(new PatternLayout("%d{yyyy/MM/dd HH:mm:ss} %-5p %M(%F:%L) - %m%n"));
+			drfa.setAppend(true);
+			
+			TimeBasedRollingPolicy tbrp = new TimeBasedRollingPolicy();
+			String fNamePattern = System.getProperty(SYS_PROP_LOG4J_DIR) + "/" + logDir + "/daily_" + System.getProperty(SYS_PROP_SERVER_NAME) + "_" + ".%d{" + DATE_PATTERN + "}.log";
+			tbrp.setFileNamePattern(fNamePattern);
+			drfa.setRollingPolicy(tbrp);				
+			drfa.activateOptions();				
+			APPENDER_MAP.put(logDir + SUCCESS_LOG_SUFFIX, drfa);
+			
+			
+			RollingFileAppender drfaE = new RollingFileAppender();
+			drfaE.setName(clsName + ERROR_LOG_SUFFIX);
+			drfaE.setLayout(new PatternLayout("%d{yyyy/MM/dd HH:mm:ss} %-5p %M(%F:%L) - %m%n"));
+			
+			TimeBasedRollingPolicy tbrpE = new TimeBasedRollingPolicy();
+			String errFileNamePattern = System.getProperty(SYS_PROP_LOG4J_DIR) + "/" + logDir + "/daily_error_" + System.getProperty(SYS_PROP_SERVER_NAME) + "_" + ".%d{" + DATE_PATTERN + "}.log";
+			tbrpE.setFileNamePattern(errFileNamePattern);
+			drfaE.setRollingPolicy(tbrpE);
+			drfaE.setAppend(true);
+			drfaE.activateOptions();				
+			APPENDER_MAP.put(logDir + ERROR_LOG_SUFFIX, drfaE);
+		}
+		
+		ConsoleAppender console = new ConsoleAppender();
+		console.setLayout(new PatternLayout("%d{yyyy/MM/dd HH:mm:ss} %-5p %M(%F:%L) - %m%n"));
+		console.setThreshold(Level.INFO);
+		console.activateOptions();
+		
+		Logger logger = Logger.getLogger(cls.getName() + SUCCESS_LOG_SUFFIX);
+		logger.addAppender(APPENDER_MAP.get(logDir + SUCCESS_LOG_SUFFIX));			
+		logger.addAppender(console);
+		
+		Logger loggerE = Logger.getLogger(cls.getName() + ERROR_LOG_SUFFIX);
+		loggerE.addAppender(APPENDER_MAP.get(logDir + ERROR_LOG_SUFFIX));
+		loggerE.addAppender(console);
+		
+		LOGGERS_MAP.add(cls.getName());
+```
+![image](https://user-images.githubusercontent.com/45334819/61415892-042a1500-a92d-11e9-80c9-87ec60ca1f92.png)  
+- Log4j를 xml configuration 방식외에, java code로 runtime시 동적으로 생성가능  
+- 특정 업무별로 로그패턴이나 로그파일을 분리할 때 활용  
+
+### 8. XML handling
+``` java
+private void loadXml() throws Exception {
+		if (this.locations != null) {
+			for (Resource location : this.locations) {				
+				DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+				DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+				Document doc = dBuilder.parse(location.getFile());
+				doc.getDocumentElement().normalize();
+				
+				Node rootNode = doc.getDocumentElement();				
+				Map item = new LinkedHashMap();				
+				xmlObject.put(FilenameUtils.removeExtension(location.getFile().getName()), item);			
+				xmlToObject(rootNode, item);
+			}
+		}
+	}
+```
+- 사용자가 정의한 xml형식을 읽어서 map형태로 저장하고, 순회하면서 data를 가져다 쓰기위한 로딩작업
+- ![image](https://user-images.githubusercontent.com/45334819/61416175-cbd70680-a92d-11e9-8d07-24bc38ebd684.png)
+
