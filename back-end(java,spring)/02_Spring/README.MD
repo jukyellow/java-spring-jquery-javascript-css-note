@@ -78,6 +78,7 @@ public class EnumTestMain {
 </pre>
 
 ### 6. Log4j Filter
+- Filter를 적용해 runtime시 동적으로 다양한 제어 가능  
 ``` java
 public class ConsoleFilter extends Filter {
 	@Override
@@ -98,10 +99,11 @@ public class ConsoleFilter extends Filter {
 		<filter class="com.test.logging.ConsoleFilter" />
 	</appender>
 ```
-- Filter를 적용해 runtime시 동적으로 다양한 제어 가능
 
 ### 7. Daynamic Log4j
 - 참고: https://www.programcreek.com/java-api-examples/?api=org.apache.log4j.RollingFileAppender
+- Log4j를 xml configuration 방식외에, java code로 runtime시 동적으로 생성가능  
+- 특정 업무별로 로그패턴이나 로그파일을 분리할 때 활용  
 ``` java
 if(!APPENDER_MAP.containsKey(logDir)) {	// Appender 
 			String clsName = rClass.getSimpleName();
@@ -148,10 +150,10 @@ if(!APPENDER_MAP.containsKey(logDir)) {	// Appender
 		LOGGERS_MAP.add(cls.getName());
 ```
 ![image](https://user-images.githubusercontent.com/45334819/61415892-042a1500-a92d-11e9-80c9-87ec60ca1f92.png)  
-- Log4j를 xml configuration 방식외에, java code로 runtime시 동적으로 생성가능  
-- 특정 업무별로 로그패턴이나 로그파일을 분리할 때 활용  
+-https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/logging/Util
 
 ### 8. XML handling
+- 사용자가 정의한 xml형식을 읽어서 map형태로 저장하고, 순회하면서 data를 가져다 쓰기위한 로딩작업  
 ``` java
 private void loadXml() throws Exception {
 		if (this.locations != null) {
@@ -169,6 +171,6 @@ private void loadXml() throws Exception {
 		}
 	}
 ```
-- 사용자가 정의한 xml형식을 읽어서 map형태로 저장하고, 순회하면서 data를 가져다 쓰기위한 로딩작업
 - ![image](https://user-images.githubusercontent.com/45334819/61416175-cbd70680-a92d-11e9-8d07-24bc38ebd684.png)
+- https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/xml
 
