@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root type='list'>
+	<info>
+		<step>1</step>
+		<queryId>Test.selectFromDual</queryId>
+		<queryType>select</queryType>			
+	</info>	
+	<info>
+		<step>2</step>
+		<queryId>Test.selectFromDual2</queryId>
+		<queryType>select</queryType>			
+	</info>	
+</root>

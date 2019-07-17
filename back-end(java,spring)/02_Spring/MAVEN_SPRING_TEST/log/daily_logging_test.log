@@ -14,3 +14,15 @@
  2019/05/31 18:02:55 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:D:\01_KTNET\workspace.ext\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
 
  2019/05/31 18:02:55 ERROR <init>(LoggingTest.java:60) - Exception occurs:err Test...  
+
+ 2019/07/18 07:08:07 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:C:\100_workspace_eclipse\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/07/18 07:08:07 ERROR <init>(LoggingTest.java:60) - Exception occurs:err Test...  
+
+ 2019/07/18 07:11:51 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:C:\100_workspace_eclipse\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/07/18 07:11:51 ERROR <init>(LoggingTest.java:60) - Exception occurs:err Test...  
+
+ 2019/07/18 07:13:00 INFO  <init>(LoggingTest.java:54) - -- print app info (Home:C:\100_workspace_eclipse\MAVEN_SPRING_TEST,appName:Spring Test App.) --  
+
+ 2019/07/18 07:13:00 ERROR <init>(LoggingTest.java:60) - Exception occurs:err Test...  

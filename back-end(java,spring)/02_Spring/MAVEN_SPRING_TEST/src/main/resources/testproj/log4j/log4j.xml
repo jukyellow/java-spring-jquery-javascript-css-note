@@ -5,6 +5,7 @@
 		<layout class="org.apache.log4j.PatternLayout">
 			<param name="ConversionPattern" value="%5p (%F[%M]:%L) [%d{yyyy/MM/dd HH:mm:ss.SSS}] - %m%n" />
 		</layout>
+		<filter class="com.test.logging.ConsoleFilter" />
 	</appender>
 	
 	<appender name="DAILY_APPENDER" class="org.apache.log4j.DailyRollingFileAppender">
@@ -64,7 +65,7 @@
 	</logger>
 	
 	<root>
-		<level value="warn" />
+		<level value="info" /> <!-- TRACE>DEBUG>INFO>WARN>ERROR>FATAL -->
 		<appender-ref ref="CONSOLE_APPENDER" />		
 	</root>
 </log4j:configuration>

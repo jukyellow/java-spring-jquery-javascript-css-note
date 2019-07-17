@@ -1,0 +1,85 @@
+2019/07/18 07:08:07 DEBUG setLocations(XmlObject.java:49) - XmlObject setLocations called!
+2019/07/18 07:08:07 DEBUG setLocations(XmlObject.java:50) - >>locations:file [C:\100_workspace_eclipse\MAVEN_SPRING_TEST\src\main\resources\testproj\config\test_xml_file.xml]
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:138) - >>1, node.getNodeName():root
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:08:07 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:11:51 DEBUG setLocations(XmlObject.java:49) - XmlObject setLocations called!
+2019/07/18 07:11:51 DEBUG setLocations(XmlObject.java:50) - >>locations:file [C:\100_workspace_eclipse\MAVEN_SPRING_TEST\src\main\resources\testproj\config\test_xml_file.xml]
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:138) - >>1, node.getNodeName():root
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:11:51 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:12:36 DEBUG setLocations(XmlObject.java:49) - XmlObject setLocations called!
+2019/07/18 07:12:36 DEBUG setLocations(XmlObject.java:50) - >>locations:file [C:\100_workspace_eclipse\MAVEN_SPRING_TEST\src\main\resources\testproj\config\test_xml_file.xml]
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:138) - >>1, node.getNodeName():root
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:12:36 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:12:50 DEBUG setLocations(XmlObject.java:49) - XmlObject setLocations called!
+2019/07/18 07:12:50 DEBUG setLocations(XmlObject.java:50) - >>locations:file [C:\100_workspace_eclipse\MAVEN_SPRING_TEST\src\main\resources\testproj\config\test_xml_file.xml]
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:138) - >>1, node.getNodeName():root
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:12:50 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:13:00 DEBUG setLocations(XmlObject.java:49) - XmlObject setLocations called!
+2019/07/18 07:13:00 DEBUG setLocations(XmlObject.java:50) - >>locations:file [C:\100_workspace_eclipse\MAVEN_SPRING_TEST\src\main\resources\testproj\config\test_xml_file.xml]
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:138) - >>1, node.getNodeName():root
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:142) - >>1, call xmlToObject(Node Name):info
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):step
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():step
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryId
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryId
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:159) - >>2, call xmlToObject(Node Name):queryType
+2019/07/18 07:13:00 DEBUG xmlToObject(XmlObject.java:169) - >>2, node.getNodeName():queryType
