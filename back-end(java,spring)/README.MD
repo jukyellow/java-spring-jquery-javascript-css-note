@@ -13,6 +13,8 @@
 2-5) enum  
 2-6) Log4j Filter  
 2-7) Dynamic Log4j  
-2-8) xml  
+2-8) xml (load->list/map)
+
+#### 3. Jsoup XML paring
 
 
