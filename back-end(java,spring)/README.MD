@@ -15,6 +15,11 @@
 2-7) Dynamic Log4j  
 2-8) xml (load->list/map)
 
-#### 3. Jsoup XML paring
+#### 3. Jsoup XML paring & Get Http Rest Request/Response
+``` java
+String xml = getHttpRestData();
+Document doc = Jsoup.parse(xml, "", Parser.xmlParser());
+```
+- https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/back-end(java%2Cspring)/02_XmlJsoupTestMain.java  
 
 
