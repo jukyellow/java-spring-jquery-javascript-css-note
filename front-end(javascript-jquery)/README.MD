@@ -14,7 +14,7 @@
 - 설명: 크롬 select box에서 엔터시 기본동작은, dropdown메뉴 표시이다.
 - 소스설명: 콤보박스에서 항목을 선택하고, 엔터(enter)시 dropdown메뉴 대신에 다른기능(화면 조회등)을 적용할 수 있다.
 - https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/03_Chrome_Dropdown_disable.html
-```html
+``` html  
 window.onload = function() {
     document.getElementById('keyPressDisable').onclick = function() {
         if(this.checked) { document.getElementById('testSelectBox').onkeypress = false; }  
@@ -28,5 +28,7 @@ window.onload = function() {
         }
         document.getElementById('testSelectBox').focus();
     }
-};
-```
+};  
+```  
+
+
