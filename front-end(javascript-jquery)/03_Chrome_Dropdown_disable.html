@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script type="text/javascript">
+var fn_keyPressListener = function() {
+    return false;
+}
+window.onload = function() {
+    document.getElementById('keyPressDisable').onclick = function() {
+        if(this.checked) {
+            document.getElementById('testSelectBox').onkeypress = fn_keyPressListener;
+        } else {
+            document.getElementById('testSelectBox').onkeypress = null;
+        }
+        
+        document.getElementById('testSelectBox').onkeyup = function(e) {
+            var el = e.srcElement ? e.srcElement : e.target;
+            if (e.which == 13) { //enter
+                alert('키업:' + el);
+            }
+        }
+        
+        document.getElementById('testSelectBox').focus();
+    }
+};
+</script>
+</head>
+<body>
+<select id="testSelectBox">
+    <option>메뉴1</option>
+    <option>메뉴2</option>
+    <option>메뉴3</option>
+</select>
+<input type="checkbox" id="keyPressDisable">  선택시 keypress 해제되고, 엔터시 alert출력 </input>
+</body>
+</html>
