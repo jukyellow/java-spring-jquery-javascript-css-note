@@ -16,7 +16,7 @@ window.onload = function() {
         document.getElementById('testSelectBox').onkeyup = function(e) {
             var el = e.srcElement ? e.srcElement : e.target;
             if (e.which == 13) { //enter
-                alert('키업:' + el);
+                alert('선택 data: ' + el.value);
             }
         }
         
