@@ -7,7 +7,7 @@
 
 #### 2. Spring (https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring)  
 2-1) AOP  
-2-2) Logging
+2-2) Logging  
 2-3) Reflection  
 2-4) Annotation  
 2-5) enum  
