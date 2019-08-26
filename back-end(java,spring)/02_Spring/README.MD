@@ -175,5 +175,11 @@ private void loadXml() throws Exception {
 - https://github.com/jukyellow/spring-jquery-css-note/tree/master/back-end(java%2Cspring)/02_Spring/MAVEN_SPRING_TEST/src/main/java/com/test/xml  
 
 ### 9. Spring Transaction 관리  
+#### 9-1. Annotation 방식
+- 스프링은 기본적으로 Unchecked Exception을 rollback 대상으로 지정한다.  
+- Checked Exception 발생 시 롤백을 원한다면 RollbackFor 옵션에 Exception.class를 지정해 주면 된다.  
+- propagation 옵션 NESTED, REQUIRES_NEW을 사용할려면, 새로운 Service Bean객체로 Transaction을 구성해야한다.  
+![image](https://user-images.githubusercontent.com/45334819/63722030-5c89f600-c88d-11e9-9152-1cdafc7eaf06.png)  
+![image](https://user-images.githubusercontent.com/45334819/63722055-64e23100-c88d-11e9-8d8d-76dd16dd0d55.png)  
 
-
+#### 9-2. Programming 방식  
