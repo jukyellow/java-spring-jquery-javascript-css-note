@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sqlMap PUBLIC  "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://www.ibatis.com/dtd/sql-map-2.dtd">
+<sqlMap namespace="TEST_SQL">
+	<update id="updateTestQuery1" parameterClass="map">
+	    update TEST_TBL set DATA1 = #NUM# where PK_VAL = #KEY#
+	</update>	
+	<update id="updateTestQuery2" parameterClass="map">
+	    update TEST_TBL set DATA1 = #NUM# where PK_VAL = #KEY#
+	</update>
+</sqlMap>
