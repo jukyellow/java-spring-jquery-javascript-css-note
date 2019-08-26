@@ -114,6 +114,31 @@
 	    <version>2.3</version>
 	</dependency>
     
+    <!-- eGov..Dao -->
+    <dependency>
+		<groupId>egovframework.rte</groupId>
+		<artifactId>egovframework.rte.psl.dataaccess</artifactId>
+		<version>${egovframework.rte.version}</version>
+		<exclusions>
+			<exclusion>
+				<artifactId>ibatis-sqlmap</artifactId>
+				<groupId>org.apache.ibatis</groupId>
+			</exclusion>
+		</exclusions>
+	</dependency>
+	<!-- org.apache.commons.dbcp.BasicDataSource -->
+	<dependency> 
+	    <groupId>commons-dbcp</groupId>
+	    <artifactId>commons-dbcp</artifactId>
+	    <version>1.3</version>
+    </dependency>
+    <!-- oracle jdbc14 -->
+    <dependency>
+	    <groupId>com.oracle</groupId>
+	    <artifactId>ojdbc14</artifactId>
+    	<version>10.2.0.4.0</version>
+    </dependency>
+	
   </dependencies>
   
   <build>
