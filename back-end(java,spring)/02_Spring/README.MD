@@ -183,3 +183,11 @@ private void loadXml() throws Exception {
 ![image](https://user-images.githubusercontent.com/45334819/63722055-64e23100-c88d-11e9-8d8d-76dd16dd0d55.png)  
 
 #### 9-2. Programming 방식  
+
+<br>
+
+#### 10. 스프링 비동기 처리 @Async
+- 참고: http://dveamer.github.io/java/SpringAsync.html
+- 설명: ThreadPool로 Thread갯수를 조정하면서 비동기 메소드 호출
+- https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/back-end(java%2Cspring)/02_Spring/10_Aysnc_ThreadPool.java  
+
