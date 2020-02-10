@@ -183,7 +183,122 @@ private void loadXml() throws Exception {
 ![image](https://user-images.githubusercontent.com/45334819/63722055-64e23100-c88d-11e9-8d8d-76dd16dd0d55.png)  
 
 #### 9-2. Programming 방식  
+##### 9-2-1. spring jdbc
+```
+private int deleteRequestForExternkeByJdbcBatch(List delReqList, ParamSet pset) throws Exception {
+    CommonDaoImpl Dao1 = null;;
+    CommonDaoImpl Dao2 = null;
+    Connection extConn = null;
+    Connection acpsConn = null;
+    PreparedStatement[] extPstmt = null;
+    PreparedStatement[] acpsPstmt = null;
+    
+    try {           
+        Dao1 = daoFactory.getExternkeDao();                
+        Dao2 = externkeDao.getDataSource().getConnection();
+        extConn.setAutoCommit(false);    
+        extPstmt = getExtkePstmtAboutInsert(extConn);
+        
+        acpsConn = acpsDao.getDataSource().getConnection();
+        acpsConn.setAutoCommit(false);                
+        acpsPstmt = getAcpsPstmtAboutKeDel(acpsConn);
+        
+        //1.삭제요청
+        ResultSet rs = null;
+        int inKeCnt = 0;
+        for(int i=0; i<delReqList.size(); ){
+            Map param = (Map)delReqList.get(i);
+            
+            rs = extPstmt[0].executeQuery(); //hawb가 삭제요청 가능하면 seq생성하도록 보강가능..
+            Integer seqId = 0;
+            if(rs.next()){
+                seqId = rs.getInt("SEQID");
+                param.put("SEQID", seqId);
+            }    
+            rs.close();
+	    
+            extPstmt[1].setInt(1, seqId);
+            extPstmt[1].addBatch();
+            
+            ++i; //executeBatch를 0에서는 제외하기 위해 loop하단에 배치
+            if(i % 1000 == 0){
+                int inSCnt[] = extPstmt[1].executeBatch();
+                inKeCnt += inSCnt.length;
+            }
+        }
+        int inSCnt[] = extPstmt[1].executeBatch();
+        inKeCnt += inSCnt.length;        
+        
+        //2. 삭제요청 업데이트 및 로그저장
+        int inSuccCnt = 0;
+        //Hawb단위로 addBatch됨            
+        for(int i=0; i<delReqList.size(); ){
+            Map param = (Map)delReqList.get(i);         
+            acpsPstmt[1].setInt(1, (Integer) param.get("SEQID"));
+            acpsPstmt[1].addBatch();
+            
+            ++i; //executeBatch를 0에서는 제외하기 위해 loop하단에 배치
+            if(i % 1000 == 0){
+                int inAcpCnt[] = acpsPstmt[1].executeBatch();
+                inSuccCnt += inAcpCnt.length;
+            }
+        }    
+        int inAcpCnt[] = acpsPstmt[1].executeBatch();
+        inSuccCnt += inAcpCnt.length;    
+                    
+        acpsConn.commit();
+        extConn.commit();
+        
+    } catch (BizException e){
+        throw e;
+    }catch (Exception e) {
+        e.printStackTrace();
+        if(acpsConn!=null){ acpsConn.rollback(); }
+        if(extConn!=null){ extConn.rollback(); }
+        throw new Exception("삭제요청중 오류가 발생하였습니다(" + e.getMessage() + ")");
+    }finally{
+        if(extPstmt!=null){
+            if(extPstmt[0]!=null){    extPstmt[0].close(); }
+            if(extPstmt[1]!=null){    extPstmt[1].close(); }
+        }
+        if(acpsPstmt!=null){
+            if(acpsPstmt[0]!=null){    acpsPstmt[0].close(); }
+            if(acpsPstmt[1]!=null){    acpsPstmt[1].close(); }        
+        }
+        if(acpsConn!=null){    acpsConn.setAutoCommit(true); }
+        if(extConn!=null){ extConn.setAutoCommit(true); }
+        if(acpsConn!=null){    acpsConn.close(); }
+        if(extConn!=null){    extConn.close(); }
+    }
+    
+    return delReqList.size();
+}
+```
 
+##### 9-2-2. ibatis transaction
+```
+CommonDaoImpl  acpsDao = daoFactory.getDao();
+SqlMapClient acpsSqlClient = null;    // ibatis transaction commit/rollback위해 추가 : acpsSqlClient.update()호출용    
+int delReqUpdateCnt = 0;
+try{
+    acpsSqlClient = acpsDao.getSqlMapClient();    
+    acpsSqlClient.startTransaction();
+    acpsSqlClient.getCurrentConnection().setAutoCommit(false); //중요! auto-commit=false
+    
+    delReqUpdateCnt = acpsSqlClient.update("DAE_MFAW.updateFhl01MfcsStatusByMawb", index_0_map);
+    
+    if(delReqSize!=delReqUpdateCnt){
+        //SqlMapClient commit없이 종료하면 rollback됨!
+        throw new BizException("삭제 가능한 대상이 변경되었습니다. 다시 시도하세요(삭제가능 건수:" + delReqUpdateCnt + ")");
+    }else{
+        acpsSqlClient.commitTransaction();
+        acpsSqlClient.getCurrentConnection().setAutoCommit(true); //auto-commit=false 해제
+        acpsSqlClient.getCurrentConnection().commit();  //중요! ibatis auto-commit 사용시 Spring-IOC 버그?로인해 강제로 commit필요
+    }
+}finally{
+    acpsSqlClient.endTransaction();
+}    
+```
 <br>
 
 #### 10. 스프링 비동기 처리 @Async
