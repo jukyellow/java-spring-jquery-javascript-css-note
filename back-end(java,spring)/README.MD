@@ -37,7 +37,7 @@ https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/
 > 정상적으로 종료될 때. 예) 마지막 논데몬 쓰레드가 종료되었거나 System.exit()가 호출될 때.  
 > JVM이 강제적으로 종료될 때. 예) 시스템 셧다운, 사용자 로그아웃, Ctrl+C 누름  
 - Sutdownhook 동작과 리소스해제 작업 과정 설명
-> 1)Java Signal 수신(kill 기본 옵션 -15, SIGTERM:정상종료) 또는 JVM 종료
+> 1)Java Signal 수신(kill 기본 옵션 -15, SIGTERM:정상종료) 또는 JVM 종료  
 > 2)Non-daemon Thread 종료  
 > 3)정상적인 종료(SIGTERM, System.exit() 등)인 경우에만 ShutdownHook 수행  
 > 4)ShutdownHook 메소드 종료전까지 프로세스는 종료되지 않음  
