@@ -32,11 +32,16 @@ https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/
 #### 6. Spring Boot (https://github.com/jukyellow/java-spring-jquery-javascript-css-note/tree/master/back-end(java%2Cspring)/03_SpringBoot)
 
 
-#### 7. Java 프로세스 안전하게 종료시키기
-- 서버 프로그램의 경우 할당한 자원이나 상태 정보등을 서버 종료시에 올바르게 처리해주어야 하는데, 강제 종료시 이런 것들을 올바르게 처리할 수 없는 문제가 발생한다.  
+#### 7. Java 프로세스 안전하게 종료시키기 
 - 자바는 이런 문제를 방지하기 위해서 1.3 버전부터 '셧다운 후크(Shutdown Hook)'라는 기능을 도입하였다. 셧다운 후크는 JVM이 셧다운될 때에 셧다운 이벤트를 가로채서 어떤 코드를 수행한 후 최종적으로 셧다운 되도록 한다. 참고로, JVM은 다음과 같은 상황인 경우 셧다운 이벤트를 발생시킨다.  
 > 정상적으로 종료될 때. 예) 마지막 논데몬 쓰레드가 종료되었거나 System.exit()가 호출될 때.  
 > JVM이 강제적으로 종료될 때. 예) 시스템 셧다운, 사용자 로그아웃, Ctrl+C 누름  
+- Sutdownhook 동작과 리소스해제 작업 과정 설명
+> 1)Java Signal 수신(kill 기본 옵션 -15, SIGTERM:정상종료) 또는 JVM 종료
+> 2)Non-daemon Thread 종료  
+> 3)정상적인 종료(SIGTERM, System.exit() 등)인 경우에만 ShutdownHook 수행  
+> 4)ShutdownHook 메소드 종료전까지 프로세스는 종료되지 않음  
+> 5)ShutdownHook 메소드 종료시, 리소스 clear작업 수행  
 ```
 Runtime.getRuntime().addShutdownHook(new Thread(instance));
 
