@@ -52,3 +52,15 @@ public void run() {
 ```
 - 샘플(spring framework) 소스: https://github.com/jukyellow/java-spring-jquery-javascript-css-note/tree/master/back-end(java%2Cspring)/java-stop-signal   
 
+#### 8. Java 다국어(UTF-8) 처리시, 문자열 자르기(substrb)
+- substrb 메소드 소스: https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/back-end(java%2Cspring)/04_java_utf8_substrb.java   
+- 사용   
+```
+StringBuffer addr1SB = new StringBuffer();
+int addr1CharLen = substrb(remainAddrs, addr1SB, 0, 60);
+int startCharIdx = addr1CharLen;
+
+StringBuffer addr2SB = new StringBuffer();
+int addr2CharLen = substrb(remainAddrs, addr2SB, startCharIdx, 60);
+startCharIdx += addr2CharLen;
+```
