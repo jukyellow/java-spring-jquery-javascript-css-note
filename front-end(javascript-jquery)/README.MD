@@ -30,6 +30,7 @@ window.onload = function() {
     }
 };  
 ```  
+<br>
 
 #### 4. Javascript Base64 UTF-8 Encode/Decode source
-https://github.com/jukyellow/java-spring-jquery-javascript-css-note/tree/master/front-end(javascript-jquery)
+https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/04.Javascript_Base64_UTF8.js  
