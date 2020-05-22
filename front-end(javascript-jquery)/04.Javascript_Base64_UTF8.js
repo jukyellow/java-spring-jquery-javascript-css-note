@@ -1,4 +1,5 @@
-//https://devlin.tistory.com/1
+//출처: https://devlin.tistory.com/1
+
 // Define the string
 var string = 'Hello World!';
 // Encode the String
