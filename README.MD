@@ -14,4 +14,4 @@
 2-1. InputBox Filter  
 2-2. Javascript Hashmap  
 2-3. SelectBox Chrome Dropdown disable & Enter  
-2-4. avascript Base64 UTF-8 Encode/Decode source
+2-4. Javascript Base64 UTF-8 Encode/Decode source
