@@ -310,7 +310,7 @@ try{
 #### 11. Spring DB re-conn 설정 
 - https://d2.naver.com/helloworld/5102792, https://d2.naver.com/helloworld/1321  
 - testOnBorrow=false/testWhileIdle=true 추천, testOnBorrow로 과도한 요청 및 성능저하 원인이 될수 있음  
-- 버전정보: dbcp 1.4, 스프링 3.0.7, ojdbc6, jdk1.7  
+- 버전정보: dbcp 1.4, 스프링 3.0.7, ojdbc6(11.0.2.0), jdk1.7  
 ```
    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${default.driverClassName}"/>
