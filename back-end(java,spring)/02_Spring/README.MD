@@ -305,4 +305,25 @@ try{
 - 참고: http://dveamer.github.io/java/SpringAsync.html
 - 설명: ThreadPool로 Thread갯수를 조정하면서 비동기 메소드 호출
 - https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/back-end(java%2Cspring)/02_Spring/10_Aysnc_ThreadPool.java  
+<br>
 
+#### 11. Spring DB re-conn 설정 
+- https://d2.naver.com/helloworld/5102792, https://d2.naver.com/helloworld/1321  
+- testOnBorrow=false/testWhileIdle=true 추천, testOnBorrow로 과도한 요청 및 성능저하 원인이 될수 있음  
+- 버전정보: dbcp 1.4, 스프링 3.0.7, ojdbc6, jdk1.7  
+```
+   <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${default.driverClassName}"/>
+        <property name="url" value="${default.url}"/>
+        <property name="username" value="${default.username}"/>
+        <property name="password" value="${default.password}"/>
+        <property name="maxActive" value="${default.maxActive}"/>
+<!-- spring db pool (dbcp+oracle) reconn 설정) -->
+        <property name="testOnBorrow" value="true"/>
+        <property name="maxWait" value="3000"/>
+        <property name="testWhileIdle" value="true"/>
+        <property name="validationQuery" value="select 1 from dual"/>
+        <property name="connectionProperties" value="oracle.net.CONNECT_TIMEOUT=3000;oracle.net.ReadTimeout=3000" /> <!-- 현행3초, RAC에서는 서버2대 6초뒤 timeout -->
+    </bean>
+```
+<br>
