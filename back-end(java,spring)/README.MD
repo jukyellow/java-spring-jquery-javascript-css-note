@@ -15,7 +15,8 @@
 2-7) Dynamic Log4j  
 2-8) xml (load->list/map)  
 2-9) Transaction  
-2-10) Async
+2-10) Async  
+2-11) db-reconn  
 
 #### 3. Jsoup XML paring & Get Http Rest Request/Response
 ``` java
