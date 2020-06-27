@@ -34,3 +34,8 @@ window.onload = function() {
 
 #### 4. Javascript Base64 UTF-8 Encode/Decode source
 https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/04.Javascript_Base64_UTF8.js  
+<br>
+
+#### 5. Javascript 정규식을 활용한 data 포맷검증  
+https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/05_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EC%A0%95%EA%B7%9C%EC%8B%9D.md  
+
