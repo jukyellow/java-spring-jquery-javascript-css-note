@@ -47,3 +47,7 @@ https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/
 #### 7. Html Location Layout + 이미지 가운데 정렬 + 이미지 팝업  
 https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/07_position_layout.md
 <br>
+
+#### 8. 자바스크립트 차트(billboard chart)  
+https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/08_chart.md  
+<br>
