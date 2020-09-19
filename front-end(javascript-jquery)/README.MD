@@ -38,8 +38,12 @@ https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/
 
 #### 5. Javascript 정규식을 활용한 data 포맷검증  
 https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/05_%EC%9E%90%EB%B0%94%EC%8A%A4%ED%81%AC%EB%A6%BD%ED%8A%B8%20%EC%A0%95%EA%B7%9C%EC%8B%9D.md  
-
 <br>
 
 #### 6. Html Table 작업
 https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/06_Table_layout_colspan_rowspan.md
+<br>
+
+#### 7. Html Location Layout + 이미지 가운데 정렬 + 이미지 팝업  
+https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/front-end(javascript-jquery)/07_position_layout.md
+<br>
