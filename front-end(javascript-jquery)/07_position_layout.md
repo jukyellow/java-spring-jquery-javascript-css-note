@@ -2,6 +2,7 @@
 
 ### 1. 화면 위치 정렬(가운데 정렬) 
 > 참고: https://firerope.tistory.com/4  
+
 ![image](https://user-images.githubusercontent.com/45334819/93689685-d8478800-fb0b-11ea-9d84-90988d88ddf4.png)  
 
 ### 2. 이미지 가운데 정렬 css
