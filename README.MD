@@ -8,6 +8,8 @@
 1-4. Exception Overriding  
 1-5. Spring Boot  
 1-6. Java Stop Signal  
+1-7. Java 다국어 처리시 문자열 자르기(substrb)  
+1-8. Java 압축  
 
 
 ### 2. [Jquery & Javascript & CSS](https://github.com/jukyellow/java-spring-jquery-javascript-css-note/tree/master/front-end(javascript-jquery))  
