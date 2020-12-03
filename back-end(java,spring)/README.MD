@@ -65,3 +65,6 @@ StringBuffer addr2SB = new StringBuffer();
 int addr2CharLen = substrb(remainAddrs, addr2SB, startCharIdx, 60);
 startCharIdx += addr2CharLen;
 ```
+
+#### 9. Java 압축(한글 파일명 깨짐 방지)
+- https://github.com/jukyellow/java-spring-jquery-javascript-css-note/blob/master/back-end(java%2Cspring)/05_compress.java  
