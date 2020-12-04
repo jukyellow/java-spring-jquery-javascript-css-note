@@ -12,7 +12,7 @@
 ```
 
 ``` java
-//(20.12.03,juk) csv파일을 압축(zip)하여 다운로드
+//(20.12.03,juk) csv파일을 압축하여 zip파일 생성
 private void createZipFile(File csvFile, String fullPathName) {
   ArchiveOutputStream archgOut = null;
   FileOutputStream fileOut = null;
