@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Webpack Example</title>
+<script type="module">
+import { alertCurrtime } from './src/index.js';
+import * as helloJS from './src/hello.js';
+window.onload = function(){
+    document.getElementById("hello_btn").onclick = function() {
+        helloJS.hello.alertHello();
+    }
+    document.getElementById("time_btn").onclick = function() {
+        alertCurrtime();
+    }
+}
+</script>
+</head>
+
+<body>
+    <!-- <script src="./dist/main.js"></script> -->
+	<button id="hello_btn">getHelloMsg</button>
+    <button id="time_btn">getCurrentTime</button>
+</body>
+</html>

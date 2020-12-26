@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>old version Example</title>
+<script type="text/javascript">
+window.onload = function(){
+	load_model_api();
+	
+    const div = document.createElement("div");
+    document.body.appendChild(div);
+    setInterval(() => (div.innerText = window.import_js.currentTime()), 1000);
+}
+async function load_model_api() {
+    let import_js = await import('./index_export.js');
+    window.import_js = import_js;
+}
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

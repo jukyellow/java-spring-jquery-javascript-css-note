@@ -1,0 +1,19 @@
+1) webpack 설정 설치
+>npm init -y
+2) 기타 모듈 설치
+>npm i -S moment
+3) webpack, webpack-cli 설치
+>npm i -D webpack
+>npm i -D webpack-cli
+4) Webpack Bundle 만들기
+>src,dist 경로 생성
+>src밑에 js파일 등 번들할 파일 넣기
+>npx webpack
+>dist밑에 main.js 생성 및html에 경로변경
+
+5)webpack config 사용
+>webpack.config.js 파일생성
+>각종설정(entry,output등 설정)
+>npx webpack
+6)Loader 설정
+>npm i --D style-loader css-loader
