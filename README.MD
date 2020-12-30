@@ -22,3 +22,4 @@
 2-7. CSS Position / Image Popup / Centerized  
 2-8. Javascript Chart(billboard-chart)  
 2-9. 자바스크립트의 클래스 구현법(리터럴,메소드,프로퍼타입) 및 객체지향 프로그래밍 특징(추상화,캡슐화,상속,다형성) 구현방법  
+2-10. Modern Web(node, webpack)  
